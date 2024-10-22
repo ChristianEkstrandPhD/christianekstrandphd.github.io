@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Your Name</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your existing CSS file -->
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Christian Ekstrand</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the Author</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="contact-section">
+        <h1>Contact Me</h1>
+        <p>If you have any questions or inquiries, feel free to reach out via the form below or email me directly.</p>
+
+        <!-- Contact Form -->
+        <form action="submit_form.php" method="POST" class="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="6" placeholder="Enter your message" required></textarea>
+
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Direct Contact</h2>
+            <p>Email: <a href="mailto:youremail@example.com">christian.ekstrand.phd@gmail.com</a></p>
+        </div>
+    </section>
