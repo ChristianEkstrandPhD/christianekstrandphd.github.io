@@ -174,22 +174,21 @@ footer {
     margin-top: 40px;
 }
 
+/* Style for the profile photo */
 .profile-photo {
-    position: relative; /* Change to relative or static to avoid absolute positioning issues */
-    width: 100%; /* Allow the image to scale to its container */
-    max-width: 250px; /* Set a maximum width to prevent it from being too large */
+    width: 150px; /* Adjust the size of the photo */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Keep the circular effect */
-    object-fit: cover; /* Ensure it scales and crops properly */
-    margin: 20px auto; /* Center the image horizontally */
-    display: block; /* Ensure it's a block element for proper centering */
+    border-radius: 50%; /* Make it circular */
+    display: block;
+    margin: 20px auto; /* Center the image on smaller screens */
+    object-fit: cover; /* Ensure it scales properly */
 }
 
-@media (max-width: 600px) {
+/* Media queries for larger screens (iPad or desktop) */
+@media (min-width: 768px) {
     .profile-photo {
-        max-width: 150px; /* Make the image smaller on mobile screens */
-        width: 80%; /* Scale down on smaller screens */
-        top: 10px; /* Adjust the positioning if necessary */
+        float: right; /* Float the photo to the right */
+        margin: 20px 0 20px 20px; /* Add some margin to the left to give space */
     }
 }
 
