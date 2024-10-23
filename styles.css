@@ -122,13 +122,22 @@ footer {
 }
 
 .profile-photo {
-    position: absolute;
-    top: 80px; /* Adjust this value to position it below the nav */
-    right: 20px; /* This keeps the image aligned to the right */
-    width: 250px; /* Adjust the size of the image */
-    height: 250px;
-    border-radius: 50%; /* Make it circular */
-    object-fit: cover; /* Ensure it scales properly */
+    position: relative; /* Change to relative or static to avoid absolute positioning issues */
+    width: 100%; /* Allow the image to scale to its container */
+    max-width: 250px; /* Set a maximum width to prevent it from being too large */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Keep the circular effect */
+    object-fit: cover; /* Ensure it scales and crops properly */
+    margin: 20px auto; /* Center the image horizontally */
+    display: block; /* Ensure it's a block element for proper centering */
+}
+
+@media (max-width: 600px) {
+    .profile-photo {
+        max-width: 150px; /* Make the image smaller on mobile screens */
+        width: 80%; /* Scale down on smaller screens */
+        top: 10px; /* Adjust the positioning if necessary */
+    }
 }
 
 /* Contact Section */
