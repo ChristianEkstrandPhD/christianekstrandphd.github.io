@@ -287,28 +287,54 @@ footer {
     color: #16a085;
 }
 
-/* Responsive Design: For mobile (screen width under 600px) */
+/* Mobile-specific styling */
 @media (max-width: 600px) {
     .nav-container {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 
+    .menu-toggle {
+        display: block; /* Display the hamburger icon */
+        cursor: pointer;
+        font-size: 30px;
+        margin-right: 20px;
+    }
+
+    /* Initially hide the nav menu on mobile */
     .nav-menu {
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    /* Show the nav menu when active */
+    .nav-menu.active {
+        display: flex;
     }
 
     .nav-menu li {
-        margin: 0;
         width: 100%;
+        text-align: center;
     }
 
-    .nav-menu a {
-        padding: 10px;
-        font-size: 18px;
+    .nav-menu li a {
+        padding: 15px 20px;
+        display: block;
         width: 100%;
+        text-align: center;
+        background-color: #fff;
+        color: #333;
+    }
+
+    .nav-menu li a:hover {
+        background-color: #f0f0f0;
     }
 }
 
