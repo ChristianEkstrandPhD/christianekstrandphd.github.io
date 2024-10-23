@@ -241,13 +241,14 @@ footer {
 /* Media queries for mobile screens */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 120px;
-        height: 120px;
-        position: relative;
-        top: 40px; /* Move it down by 40px */
-        margin: 0 auto;
-        display: block;
-    }
+    width: 150px; /* Size for smaller screens */
+    height: auto;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover;
+    display: block;
+    position: relative; /* No absolute positioning for mobile */
+    margin: 20px auto; /* This centers the photo horizontally */
+}
 
     .hero h1 {
         font-size: 28px;
