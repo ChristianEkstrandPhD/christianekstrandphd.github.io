@@ -37,32 +37,54 @@ nav {
 
 /* Base styles for the nav menu */
 .nav-menu {
-    display: flex;
-    justify-content: space-between;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initially hide the menu off-screen to the right */
+    width: 250px; /* Adjust the width of the menu */
+    height: 100%; /* Full height */
+    background-color: #333; /* Background color for the menu */
+    color: #fff;
+    transition: right 0.3s ease; /* Smooth slide-in effect */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the links */
+    text-align: center;
 }
 
-/* Make the nav items fill the width and look good on mobile */
+/* Style for the nav items */
 .nav-menu li {
-    margin: 0;
+    margin: 10px 0;
 }
 
 .nav-menu a {
-    text-decoration: none;
-    color: #333;
-    display: block;
+    color: white;
     padding: 15px 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 16px;
+    text-decoration: none;
+    font-size: 18px;
 }
 
-.nav-menu li a:hover {
-    background-color: #1abc9c;
-    color: #fff;
-    border-radius: 4px;
+.nav-menu a:hover {
+    background-color: #575757;
+}
+
+/* When the menu is active, slide it in */
+.nav-menu.active {
+    right: 0; /* Menu slides into view */
+}
+
+/* Style the hamburger icon */
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    color: #333;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
 img {
@@ -287,57 +309,26 @@ footer {
     color: #16a085;
 }
 
-/* Mobile-specific styling */
-@media (max-width: 600px) {
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu-toggle {
-        display: block; /* Display the hamburger icon */
-        cursor: pointer;
-        font-size: 30px;
-        margin-right: 20px;
-    }
-
-    /* Initially hide the nav menu on mobile */
+@media (min-width: 601px) {
+    /* On larger screens, show the menu normally */
     .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    /* Show the nav menu when active */
-    .nav-menu.active {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
         display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
     }
 
-    .nav-menu li {
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-menu li a {
-        padding: 15px 20px;
-        display: block;
-        width: 100%;
-        text-align: center;
-        background-color: #fff;
+    .nav-menu a {
         color: #333;
     }
 
-    .nav-menu li a:hover {
-        background-color: #f0f0f0;
+    .menu-toggle {
+        display: none; /* Hide the hamburger icon on larger screens */
     }
 }
-
 @media (max-width: 768px) {
     .hero {
         padding: 80px 20px;
