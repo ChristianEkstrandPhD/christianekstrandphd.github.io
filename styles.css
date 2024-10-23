@@ -43,9 +43,9 @@ nav {
     padding: 10px;
     color: #333;
     position: absolute;
-    top: -15px; /* Ensure the icon is higher above the line */
-    right: 20px;
-    z-index: 1001;
+    top: -15px; /* Move the icon higher to sit well above the horizontal line */
+    right: 20px; /* Keep it aligned to the right */
+    z-index: 1001; /* Ensure the hamburger icon stays on top */
 }
 
 /* Base styles for the nav menu */
@@ -54,18 +54,18 @@ nav {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 20px;
-    right: -200px; /* Off-screen by default */
-    width: 180px;
-    background-color: #333;
-    color: #fff;
-    transition: right 0.3s ease;
+    top: 20px; /* Start slightly below the top */
+    right: -200px; /* Initially hide the menu off-screen */
+    width: 180px; /* Set the width */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    transition: right 0.3s ease; /* Smooth slide-in effect */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align menu items at the top */
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
 /* Style for the nav items */
@@ -81,12 +81,12 @@ nav {
 }
 
 .nav-menu a:hover {
-    background-color: #575757;
+    background-color: #575757; /* Slight hover effect */
 }
 
 /* When the menu is active, fully align it to the right */
 .nav-menu.active {
-    right: 0;
+    right: 0; /* Slide the menu into view, fully to the right */
 }
 
 /* Larger screen adjustments */
@@ -99,7 +99,7 @@ nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        box-shadow: none;
+        box-shadow: none; /* No shadow on larger screens */
     }
 
     .nav-menu a {
@@ -107,7 +107,7 @@ nav {
     }
 
     .menu-toggle {
-        display: none;
+        display: none; /* Hide the hamburger icon on larger screens */
     }
 }
 
@@ -157,49 +157,53 @@ footer {
     margin-top: 40px;
 }
 
-/* Hero Section */
+/* Base styles for the hero section */
 .hero {
-    background-color: #1abc9c;
-    padding: 80px 20px;
-    position: relative;
-    text-align: center;
-    color: white;
+    background-color: #1abc9c; /* Green background */
+    padding: 80px 20px; /* Increase padding for better spacing */
+    position: relative; /* Allows positioning for the profile photo */
+    text-align: center; /* Center the text */
+    color: white; /* Ensure text color is white */
 }
 
+/* Style the heading and paragraph */
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    color: white; /* Ensure the text is white */
+    font-size: 48px; /* Increase the size of the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
 }
 
 .hero p {
-    font-size: 24px;
-    margin-bottom: 40px;
+    color: white; /* Ensure the text is white */
+    font-size: 24px; /* Increase the size of the paragraph */
+    margin-bottom: 40px; /* Add spacing below the paragraph */
 }
 
-/* Profile Photo */
+/* Base styles for the profile photo */
 .profile-photo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
+    width: 150px; /* Default size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the photo circular */
+    display: block;
     object-fit: cover;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    position: absolute; /* Make it float within the hero section */
+    top: 50%; /* Vertically center the image */
+    right: 20px; /* Align to the right */
+    transform: translateY(-50%); /* Ensure the image is vertically centered */
 }
 
 /* Media query for larger screens (iPad or desktop) */
 @media (min-width: 768px) {
     .hero {
-        padding: 80px 40px;
+        text-align: center; /* Align text to the left on larger screens */
+        padding: 80px 40px; /* Add more padding for larger screens */
     }
 
     .profile-photo {
-        width: 200px;
+        width: 200px; /* Increase the size of the photo on larger screens */
     }
 }
 
-/* Book Section */
 .book-section {
     text-align: center;
     margin: 40px auto;
@@ -207,60 +211,212 @@ footer {
 
 .books-container {
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    justify-content: center; /* Aligns books horizontally */
+    align-items: flex-start; /* Aligns books at the top */
+    gap: 50px; /* Adds more space between the books */
+    flex-wrap: wrap; /* Allows books to wrap on smaller screens */
 }
 
 .book-item {
-    width: 300px; /* Adjust the book item size */
+    width: 400px; /* Set a consistent width for the book containers */
     text-align: center;
+    display: flex;
+    flex-direction: column; /* Align text and image vertically within each item */
 }
 
 .book-cover {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ensures the book image fits the container */
+    height: auto; /* Keep aspect ratio */
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow around the book cover */
     border-radius: 8px;
 }
 
 .book-item h3 {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Add spacing under the title */
 }
 
+/* Ensure full text is displayed under each book */
 .book-item p {
     font-size: 16px;
-    line-height: 1.6;
-    margin: 0 10px 20px;
-    word-wrap: break-word;
+    line-height: 1.6; /* Increase line height for better readability */
+    margin: 0 10px 20px 10px; /* Adjust margins for the paragraph */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    text-align: left; /* Align text to the left for readability */
 }
 
-/* Mobile adjustments */
+/* Contact Section */
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #16a085;
+}
+
+/* Contact Info Section */
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-info p, .contact-info ul {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.contact-info ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+}
+
+.contact-info ul li a:hover {
+    color: #16a085;
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.author-photo {
+    width: 200px; /* Adjust the size of the author photo */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 30px auto; /* Center the image */
+}
+
+.author-bio h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.author-bio p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.author-bio ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.author-bio ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.author-bio ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+}
+
+.author-bio ul li a:hover {
+    color: #16a085;
+}
+
+/* For small screens like mobile phones */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 120px;
-        height: 120px;
-        position: static;
-        margin: 0 auto;
-        display: block;
+        width: 120px; /* Make the photo smaller */
+        height: 120px; /* Ensure it's a circular size */
+        position: static; /* Let it flow within the document normally */
+        margin: 0 auto; /* Center the image horizontally */
+        display: block; /* Ensure it's treated as a block-level element */
     }
 
     .hero {
-        text-align: center;
-        padding: 40px 20px;
+        text-align: center; /* Center the text and photo */
+        padding: 40px 20px; /* Reduce padding for smaller screens */
     }
 
+    /* Reduce font size on smaller screens for better fit */
     .hero h1 {
-        font-size: 28px;
+        font-size: 28px; /* Smaller font size for mobile */
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 16px; /* Smaller font size for mobile */
+    }
+
+    /* Adjust container spacing on smaller screens */
+    .book-section {
+        padding: 20px;
     }
 
     .book-item {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%; /* Make the book items take full width */
+        margin-bottom: 20px; /* Add spacing between book items */
     }
 }
+
