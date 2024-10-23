@@ -35,15 +35,28 @@ nav {
     text-decoration: none;
 }
 
+/* Hamburger menu icon styles */
+.menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    color: #333;
+    position: absolute;
+    top: 5px; /* Move the icon higher to stay above the horizontal line */
+    right: 20px; /* Keep it aligned to the right */
+    z-index: 1001; /* Ensure the hamburger icon stays on top */
+}
+
 /* Base styles for the nav menu */
 .nav-menu {
     list-style: none;
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 20px; /* Start a little below the top */
+    top: 20px; /* Start slightly below the top */
     right: -200px; /* Initially hide the menu off-screen */
-    width: 180px; /* Set a smaller width */
+    width: 180px; /* Set the width */
     background-color: #333; /* Dark background color */
     color: #fff; /* Text color */
     transition: right 0.3s ease; /* Smooth slide-in effect */
@@ -73,21 +86,30 @@ nav {
 
 /* When the menu is active, fully align it to the right */
 .nav-menu.active {
-    right: 0; /* Move the menu fully into view on the right */
+    right: 0; /* Slide the menu into view, fully to the right */
 }
 
-/* Hamburger menu icon styles */
-.menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 30px;
-    padding: 10px;
-    color: #333;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-}
+/* Larger screen adjustments */
+@media (min-width: 601px) {
+    .nav-menu {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        box-shadow: none; /* No shadow on larger screens */
+    }
 
+    .nav-menu a {
+        color: #333;
+    }
+
+    .menu-toggle {
+        display: none; /* Hide the hamburger icon on larger screens */
+    }
+}
 
 img {
     max-width: 100%;
@@ -309,28 +331,6 @@ footer {
 
 .author-bio ul li a:hover {
     color: #16a085;
-}
-
-/* Larger screen adjustments */
-@media (min-width: 601px) {
-    .nav-menu {
-        position: static;
-        width: auto;
-        height: auto;
-        background-color: transparent;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        box-shadow: none; /* No shadow on larger screens */
-    }
-
-    .nav-menu a {
-        color: #333;
-    }
-
-    .menu-toggle {
-        display: none; /* Hide the hamburger icon on larger screens */
-    }
 }
 
 @media (max-width: 768px) {
