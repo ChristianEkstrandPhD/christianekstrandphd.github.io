@@ -391,7 +391,7 @@ footer {
 }
 
 /* For small screens like mobile phones */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .profile-photo {
         width: 120px; /* Make the photo smaller */
         height: 120px; /* Ensure it's a circular size */
