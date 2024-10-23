@@ -119,11 +119,9 @@ img {
 /* Base styles for the hero section */
 .hero {
     background-color: #1abc9c; /* Green background */
-    padding: 60px 20px; /* Add more padding to create space for the profile photo */
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space between the text and the profile picture */
-    position: relative;
+    padding: 60px 20px; /* Adjust padding for proper spacing */
+    position: relative; /* This allows the photo to be positioned inside */
+    text-align: center; /* Center-align the text for smaller screens */
 }
 
 .hero h1 {
@@ -178,24 +176,27 @@ footer {
 
 /* Base styles for the profile photo */
 .profile-photo {
-    width: 150px; /* Set the width for smaller screens */
+    width: 150px; /* Default size for smaller screens */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make the photo circular */
-    object-fit: cover;
     display: block;
-    margin: 0 0 0 20px; /* Ensure it stays inside the green area */
+    margin: 20px auto; /* Center the photo on small screens */
+    object-fit: cover;
 }
 
 /* Media query for larger screens (iPad or desktop) */
 @media (min-width: 768px) {
-    .profile-photo {
-        width: 300px; /* Set the width for larger screens */
-        float: right; /* Align it to the right */
-        margin: 0 20px 0 0; /* Add margin to ensure it stays inside the green section */
+    .hero {
+        text-align: left; /* Align text to the left on larger screens */
+        padding: 60px 40px; /* Add more padding for larger screens */
     }
 
-    .hero {
-        padding: 80px 40px; /* Add extra padding for larger screens */
+    .profile-photo {
+        position: absolute;
+        top: 50%; /* Vertically center the photo */
+        right: 40px; /* Move it to the right */
+        transform: translateY(-50%); /* Adjust for perfect centering */
+        width: 200px; /* Increase the size of the photo on larger screens */
     }
 }
 
