@@ -189,7 +189,7 @@ footer {
     .profile-photo {
         float: right; /* Float the photo to the right */
         margin: 0 0 20px 20px; /* Add margin to the left to create space */
-        width: 300px; /* Make the photo slightly larger on larger screens */
+        width: 400px; /* Make the photo slightly larger on larger screens */
     }
 
     /* Align the photo with the "Welcome" text by adjusting the containing element */
