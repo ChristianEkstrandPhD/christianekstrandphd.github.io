@@ -396,6 +396,8 @@ footer {
         width: 120px; /* Make the photo smaller */
         height: 120px; /* Ensure it's a circular size */
         position: static; /* Let it flow within the document normally */
+        margin: 20px auto 0 auto; /* Center the image horizontally */
+        display: block; /* Ensure it's treated as a block-level element */
     }
 
     .hero {
