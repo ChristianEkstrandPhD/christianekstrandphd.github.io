@@ -41,8 +41,8 @@ nav {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 20px; /* Start slightly below the top */
-    right: -220px; /* Initially hide the menu off-screen */
+    top: 20px; /* Start a little below the top */
+    right: -200px; /* Initially hide the menu off-screen */
     width: 180px; /* Set a smaller width */
     background-color: #333; /* Dark background color */
     color: #fff; /* Text color */
@@ -51,10 +51,8 @@ nav {
     flex-direction: column;
     justify-content: flex-start; /* Align menu items at the top */
     text-align: center;
-    border-radius: 8px; /* Rounded corners for a more modern look */
+    border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    max-height: 300px; /* Limit height based on content (adjust as needed) */
-    overflow-y: auto; /* Add scrolling if the content exceeds the height */
 }
 
 /* Style for the nav items */
@@ -66,16 +64,16 @@ nav {
     color: white;
     padding: 15px 20px;
     text-decoration: none;
-    font-size: 16px; /* Make font size slightly smaller */
+    font-size: 16px;
 }
 
 .nav-menu a:hover {
     background-color: #575757; /* Slight hover effect */
 }
 
-/* When the menu is active, it slides into view */
+/* When the menu is active, fully align it to the right */
 .nav-menu.active {
-    right: 20px; /* Slide it into view with a smaller offset */
+    right: 0; /* Move the menu fully into view on the right */
 }
 
 /* Hamburger menu icon styles */
@@ -89,7 +87,6 @@ nav {
     top: 15px;
     right: 20px;
 }
-
 
 
 img {
@@ -314,7 +311,7 @@ footer {
     color: #16a085;
 }
 
-/* Responsive adjust/* Larger screen adjustments */
+/* Larger screen adjustments */
 @media (min-width: 601px) {
     .nav-menu {
         position: static;
