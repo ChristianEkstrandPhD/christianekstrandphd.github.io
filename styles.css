@@ -392,25 +392,17 @@ footer {
 /* For small screens like mobile phones */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 120px; /* Make the photo smaller */
-        height: 120px; /* Ensure it's a circular size */
-        position: relative; /* Let it flow within the document normally */
-        margin: 0 auto; /* Center the image horizontally */
-        display: block; /* Ensure it's treated as a block-level element */
+        position: relative; /* Change from absolute to relative */
+        top: auto; /* Remove top alignment */
+        margin-top: 20px; /* Add margin above the photo */
     }
 
     .hero {
-        text-align: center; /* Center the text and photo */
-        padding: 40px 20px; /* Reduce padding for smaller screens */
+        padding: 40px 20px;
     }
 
-    /* Reduce font size on smaller screens for better fit */
-    .hero h1 {
-        font-size: 28px; /* Smaller font size for mobile */
-    }
-
-    .hero p {
-        font-size: 16px; /* Smaller font size for mobile */
+    .hero h1, .hero p {
+        margin-top: 20px; /* Add space to ensure photo and text don’t overlap */
     }
 
     /* Adjust container spacing on smaller screens */
