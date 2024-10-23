@@ -41,17 +41,18 @@ nav {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 0;
-    right: -100%; /* Initially hide the menu off-screen to the right */
-    width: 250px; /* Adjust the width of the menu */
-    height: 100%; /* Full height */
+    top: 20px; /* Start from a little below the top */
+    right: -250px; /* Initially hide the menu off-screen to the right */
+    width: 200px; /* Adjust the width of the menu */
     background-color: #333; /* Background color for the menu */
     color: #fff;
     transition: right 0.3s ease; /* Smooth slide-in effect */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the links */
+    justify-content: flex-start; /* Align menu items to the top */
     text-align: center;
+    border-radius: 8px; /* Add rounded corners for a sleeker look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 /* Style for the nav items */
@@ -72,7 +73,7 @@ nav {
 
 /* When the menu is active, slide it in */
 .nav-menu.active {
-    right: 0; /* Menu slides into view */
+    right: 20px; /* Menu slides into view slightly inside */
 }
 
 /* Style the hamburger icon */
@@ -309,6 +310,7 @@ footer {
     color: #16a085;
 }
 
+/* Responsive adjustments for larger screens */
 @media (min-width: 601px) {
     /* On larger screens, show the menu normally */
     .nav-menu {
@@ -319,6 +321,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        box-shadow: none; /* Remove shadow for larger screens */
     }
 
     .nav-menu a {
@@ -329,6 +332,7 @@ footer {
         display: none; /* Hide the hamburger icon on larger screens */
     }
 }
+
 @media (max-width: 768px) {
     .hero {
         padding: 80px 20px;
