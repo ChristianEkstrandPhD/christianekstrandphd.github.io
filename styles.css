@@ -219,10 +219,10 @@ footer {
 }
 
 .book-item {
-    height: 300px; 
     text-align: center;
     display: flex;
-    flex-direction: column; /* Align text and image vertically within each item */
+    flex-direction: column;
+    /* Remove the fixed height */
 }
 
 /* Ensure full text is displayed under each book */
