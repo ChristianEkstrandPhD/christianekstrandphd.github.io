@@ -160,15 +160,23 @@ footer {
 /* Base styles for the hero section */
 .hero {
     background-color: #1abc9c; /* Green background */
-    padding: 60px 20px; /* Add padding for space */
+    padding: 80px 20px; /* Increase padding for better spacing */
     position: relative; /* Allows positioning for the profile photo */
     text-align: center; /* Center the text */
     color: white; /* Ensure text color is white */
 }
 
-/* Style the heading and paragraph to be white */
-.hero h1, .hero p {
-    color: white; /* Ensure the text is white inside the green section */
+/* Style the heading and paragraph */
+.hero h1 {
+    color: white; /* Ensure the text is white */
+    font-size: 48px; /* Increase the size of the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.hero p {
+    color: white; /* Ensure the text is white */
+    font-size: 24px; /* Increase the size of the paragraph */
+    margin-bottom: 40px; /* Add spacing below the paragraph */
 }
 
 /* Base styles for the profile photo */
@@ -185,7 +193,7 @@ footer {
 @media (min-width: 768px) {
     .hero {
         text-align: left; /* Align text to the left on larger screens */
-        padding: 60px 40px; /* Add more padding */
+        padding: 80px 40px; /* Increase padding for larger screens */
     }
 
     .profile-photo {
@@ -194,11 +202,6 @@ footer {
         right: 40px; /* Move it to the right */
         transform: translateY(-50%); /* Ensure vertical centering */
         width: 200px; /* Increase the size of the photo on larger screens */
-    }
-
-    .hero h1, .hero p {
-        margin: 0;
-        color: white; /* Ensure text color stays white on larger screens */
     }
 }
 
