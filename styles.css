@@ -185,22 +185,21 @@ footer {
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make the photo circular */
     display: block;
-    margin: 20px auto; /* Center the photo on small screens */
     object-fit: cover;
+    position: absolute; /* Make it float within the hero section */
+    top: 50%; /* Vertically center the image */
+    right: 20px; /* Align to the right */
+    transform: translateY(-50%); /* Ensure the image is vertically centered */
 }
 
 /* Media query for larger screens (iPad or desktop) */
 @media (min-width: 768px) {
     .hero {
         text-align: left; /* Align text to the left on larger screens */
-        padding: 80px 40px; /* Increase padding for larger screens */
+        padding: 80px 40px; /* Add more padding for larger screens */
     }
 
     .profile-photo {
-        position: absolute;
-        top: 50%; /* Center the image vertically */
-        right: 40px; /* Move it to the right */
-        transform: translateY(-50%); /* Ensure vertical centering */
         width: 200px; /* Increase the size of the photo on larger screens */
     }
 }
