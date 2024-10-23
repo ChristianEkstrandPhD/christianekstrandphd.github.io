@@ -211,14 +211,14 @@ footer {
 
 .books-container {
     display: flex;
-    justify-content: center; /* Aligns books horizontally in the center */
+    justify-content: center;
     align-items: flex-start; /* Aligns books at the top */
     gap: 40px; /* Adds space between the books */
-    flex-wrap: wrap; /* Ensures books wrap on smaller screens */
+    flex-wrap: wrap; /* Allows books to wrap on smaller screens */
 }
 
 .book-item {
-    width: 300px; /* Set a consistent width for the book containers */
+    width: 350px; /* Increase the width of the book containers */
     text-align: center;
 }
 
@@ -226,8 +226,16 @@ footer {
     width: 100%; /* Ensures the book image fits the container */
     height: auto;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow around the book cover */
     border-radius: 8px;
+}
+
+/* Adjust the paragraph inside book-item to ensure full text is shown */
+.book-item p {
+    font-size: 16px;
+    line-height: 1.5; /* Increase line height for readability */
+    max-width: 100%; /* Ensure the text does not get cut off */
+    word-wrap: break-word; /* Ensure text wraps properly */
 }
 /* Contact Section */
 .contact-section {
