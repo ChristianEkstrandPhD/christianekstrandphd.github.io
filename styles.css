@@ -219,8 +219,7 @@ footer {
 }
 
 .book-item {
-    height: auto; /* Ensure the container grows with the text */
-    width: 400px; /* Set a consistent width for the book containers */
+    height: 300px; 
     text-align: center;
     display: flex;
     flex-direction: column; /* Align text and image vertically within each item */
