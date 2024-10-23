@@ -222,7 +222,8 @@ footer {
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* Remove the fixed height */
+    max-width: 300px; /* Set a consistent width for both book items */
+    margin: 0 auto;
 }
 
 /* Ensure full text is displayed under each book */
