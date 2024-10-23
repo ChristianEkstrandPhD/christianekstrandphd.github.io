@@ -388,12 +388,13 @@ footer {
 /* For small screens like mobile phones */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 120px; /* Make the photo smaller */
-        height: 120px; /* Ensure it's a circular size */
-        position: static; /* Let it flow within the document normally */
-        margin: 0 auto; /* Center the image horizontally */
-        display: block; /* Ensure it's treated as a block-level element */
-    }
+    width: 120px;
+    height: 120px;
+    position: relative; /* Use relative instead of static to allow positioning */
+    top: 20px; /* Move it down by 20px */
+    margin: 0 auto;
+    display: block;
+}
 
     .hero {
         text-align: center; /* Center the text and photo */
