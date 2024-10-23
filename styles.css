@@ -35,21 +35,28 @@ nav {
     text-decoration: none;
 }
 
+/* Base styles for the nav menu */
 .nav-menu {
-    list-style: none;
     display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+/* Make the nav items fill the width and look good on mobile */
 .nav-menu li {
-    margin-left: 20px;
+    margin: 0;
 }
 
-.nav-menu li a {
+.nav-menu a {
     text-decoration: none;
     color: #333;
+    display: block;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
     font-size: 16px;
-    padding: 8px 12px;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-menu li a:hover {
@@ -280,18 +287,17 @@ footer {
     color: #16a085;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Design: For mobile (screen width under 600px) */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .nav-menu {
         flex-direction: column;
-        align-items: flex-start;
-        display: none;
-        background-color: #fff;
         width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        border-top: 1px solid #ccc;
+        background-color: #fff;
     }
 
     .nav-menu li {
@@ -299,22 +305,10 @@ footer {
         width: 100%;
     }
 
-    .nav-menu li a {
+    .nav-menu a {
+        padding: 10px;
+        font-size: 18px;
         width: 100%;
-        padding: 15px 20px;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-container {
-        position: relative;
     }
 }
 
