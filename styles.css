@@ -41,18 +41,20 @@ nav {
     margin: 0;
     padding: 0;
     position: fixed;
-    top: 20px; /* Start from a little below the top */
-    right: -250px; /* Initially hide the menu off-screen to the right */
-    width: 200px; /* Adjust the width of the menu */
-    background-color: #333; /* Background color for the menu */
-    color: #fff;
+    top: 20px; /* Start slightly below the top */
+    right: -220px; /* Initially hide the menu off-screen */
+    width: 180px; /* Set a smaller width */
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
     transition: right 0.3s ease; /* Smooth slide-in effect */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align menu items to the top */
+    justify-content: flex-start; /* Align menu items at the top */
     text-align: center;
-    border-radius: 8px; /* Add rounded corners for a sleeker look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    border-radius: 8px; /* Rounded corners for a more modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    max-height: 300px; /* Limit height based on content (adjust as needed) */
+    overflow-y: auto; /* Add scrolling if the content exceeds the height */
 }
 
 /* Style for the nav items */
@@ -64,19 +66,19 @@ nav {
     color: white;
     padding: 15px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Make font size slightly smaller */
 }
 
 .nav-menu a:hover {
-    background-color: #575757;
+    background-color: #575757; /* Slight hover effect */
 }
 
-/* When the menu is active, slide it in */
+/* When the menu is active, it slides into view */
 .nav-menu.active {
-    right: 20px; /* Menu slides into view slightly inside */
+    right: 20px; /* Slide it into view with a smaller offset */
 }
 
-/* Style the hamburger icon */
+/* Hamburger menu icon styles */
 .menu-toggle {
     display: block;
     cursor: pointer;
@@ -87,6 +89,8 @@ nav {
     top: 15px;
     right: 20px;
 }
+
+
 
 img {
     max-width: 100%;
@@ -310,9 +314,8 @@ footer {
     color: #16a085;
 }
 
-/* Responsive adjustments for larger screens */
+/* Responsive adjust/* Larger screen adjustments */
 @media (min-width: 601px) {
-    /* On larger screens, show the menu normally */
     .nav-menu {
         position: static;
         width: auto;
@@ -321,7 +324,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        box-shadow: none; /* Remove shadow for larger screens */
+        box-shadow: none; /* No shadow on larger screens */
     }
 
     .nav-menu a {
