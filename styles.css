@@ -195,7 +195,7 @@ footer {
 /* Media query for larger screens (iPad or desktop) */
 @media (min-width: 768px) {
     .hero {
-        text-align: left; /* Align text to the left on larger screens */
+        text-align: center; /* Align text to the left on larger screens */
         padding: 80px 40px; /* Add more padding for larger screens */
     }
 
