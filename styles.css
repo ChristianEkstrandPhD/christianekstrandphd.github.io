@@ -209,12 +209,13 @@ footer {
     margin: 40px auto;
 }
 
+/* Ensure books are displayed side by side on larger screens */
 .books-container {
     display: flex;
-    justify-content: center; /* Aligns books horizontally */
-    align-items: flex-start; /* Aligns books at the top */
-    gap: 50px; /* Adds more space between the books */
-    flex-wrap: wrap; /* Allows books to wrap on smaller screens */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
 }
 
 .book-item {
@@ -417,6 +418,10 @@ footer {
     .book-item {
         width: 100%; /* Make the book items take full width */
         margin-bottom: 20px; /* Add spacing between book items */
+    }
+ /* Allow the books to stack vertically on smaller screens */
+    .books-container {
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
 }
 
