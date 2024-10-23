@@ -116,23 +116,6 @@ img {
     height: auto;
 }
 
-/* Base styles for the hero section */
-.hero {
-    background-color: #1abc9c; /* Green background */
-    padding: 60px 20px; /* Adjust padding for proper spacing */
-    position: relative; /* This allows the photo to be positioned inside */
-    text-align: center; /* Center-align the text for smaller screens */
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 24px;
-}
-
 /* Main Content */
 section {
     max-width: 800px;
@@ -174,6 +157,14 @@ footer {
     margin-top: 40px;
 }
 
+/* Base styles for the hero section */
+.hero {
+    background-color: #1abc9c; /* Green background */
+    padding: 60px 20px; /* Add padding for space */
+    position: relative; /* Allows positioning for the profile photo */
+    text-align: center; /* Center the text */
+}
+
 /* Base styles for the profile photo */
 .profile-photo {
     width: 150px; /* Default size for smaller screens */
@@ -188,15 +179,19 @@ footer {
 @media (min-width: 768px) {
     .hero {
         text-align: left; /* Align text to the left on larger screens */
-        padding: 60px 40px; /* Add more padding for larger screens */
+        padding: 60px 40px; /* Add more padding */
     }
 
     .profile-photo {
         position: absolute;
-        top: 50%; /* Vertically center the photo */
-        right: 40px; /* Move it to the right */
-        transform: translateY(-50%); /* Adjust for perfect centering */
+        top: 50%; /* Center the image vertically */
+        right: 40px; /* Move it to the right of the green area */
+        transform: translateY(-50%); /* Ensure vertical centering */
         width: 200px; /* Increase the size of the photo on larger screens */
+    }
+
+    .hero h1, .hero p {
+        margin: 0;
     }
 }
 
