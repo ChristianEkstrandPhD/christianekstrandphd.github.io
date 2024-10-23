@@ -163,6 +163,12 @@ footer {
     padding: 60px 20px; /* Add padding for space */
     position: relative; /* Allows positioning for the profile photo */
     text-align: center; /* Center the text */
+    color: white; /* Ensure text color is white */
+}
+
+/* Style the heading and paragraph to be white */
+.hero h1, .hero p {
+    color: white; /* Ensure the text is white inside the green section */
 }
 
 /* Base styles for the profile photo */
@@ -185,13 +191,14 @@ footer {
     .profile-photo {
         position: absolute;
         top: 50%; /* Center the image vertically */
-        right: 40px; /* Move it to the right of the green area */
+        right: 40px; /* Move it to the right */
         transform: translateY(-50%); /* Ensure vertical centering */
         width: 200px; /* Increase the size of the photo on larger screens */
     }
 
     .hero h1, .hero p {
         margin: 0;
+        color: white; /* Ensure text color stays white on larger screens */
     }
 }
 
