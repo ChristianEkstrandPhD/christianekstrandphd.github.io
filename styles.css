@@ -198,6 +198,42 @@ footer {
         padding: 80px 40px; /* Add extra padding for larger screens */
     }
 }
+
+/* Books section */
+.books {
+    padding: 40px;
+    text-align: center;
+}
+
+.books h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.book-item {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.book-item h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.book-item p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
 /* Contact Section */
 .contact-section {
     max-width: 800px;
