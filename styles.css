@@ -116,12 +116,14 @@ img {
     height: auto;
 }
 
-/* Header (Hero Section) */
+/* Base styles for the hero section */
 .hero {
-    background-color: #1abc9c; /* Solid background color */
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
+    background-color: #1abc9c; /* Green background */
+    padding: 60px 20px; /* Add more padding to create space for the profile photo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between the text and the profile picture */
+    position: relative;
 }
 
 .hero h1 {
@@ -176,35 +178,26 @@ footer {
 
 /* Base styles for the profile photo */
 .profile-photo {
-    width: 150px; /* Size of the profile photo */
+    width: 150px; /* Set the width for smaller screens */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make the photo circular */
+    object-fit: cover;
     display: block;
-    margin: 20px auto; /* Center the image on smaller screens */
-    object-fit: cover; /* Ensure it scales properly */
+    margin: 0 0 0 20px; /* Ensure it stays inside the green area */
 }
 
 /* Media query for larger screens (iPad or desktop) */
 @media (min-width: 768px) {
     .profile-photo {
-        float: right; /* Float the photo to the right */
-        margin: 0 0 20px 20px; /* Add margin to the left to create space */
-        width: 200px; /* Make the photo slightly larger on larger screens */
+        width: 300px; /* Set the width for larger screens */
+        float: right; /* Align it to the right */
+        margin: 0 20px 0 0; /* Add margin to ensure it stays inside the green section */
     }
 
-    /* Align the photo with the "Welcome" text by adjusting the containing element */
     .hero {
-        display: flex;
-        align-items: center;
-        justify-content: space-between; /* Space between the text and the photo */
-        text-align: left; /* Ensure the text is aligned left */
-    }
-    
-    .hero h1 {
-        margin: 0; /* Remove any extra margin around the heading */
+        padding: 80px 40px; /* Add extra padding for larger screens */
     }
 }
-
 /* Contact Section */
 .contact-section {
     max-width: 800px;
