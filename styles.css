@@ -126,7 +126,6 @@ nav {
     color: white;
 }
 
-/* Style the heading and paragraph */
 .hero h1 {
     font-size: 28px;
     margin-bottom: 20px;
@@ -167,7 +166,7 @@ nav {
         width: 200px;
         height: auto;
         position: absolute;
-        top: 50%;
+        top: 70%; /* Adjusted to avoid overlapping text */
         right: 20px;
         transform: translateY(-50%);
         margin: 0;
@@ -194,7 +193,7 @@ nav {
 
 .book-cover {
     width: 100%;
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
     object-fit: cover;
     margin-bottom: 20px;
@@ -211,10 +210,15 @@ footer {
     margin-top: 40px;
 }
 
-/* Additional media queries for larger screens */
-@media (min-width: 768px) {
-    /* Adjust book cover size */
-    .book-cover {
-        max-width: 400px;
-    }
+/* Additional Styles for Other Pages */
+/* (These styles remain unchanged to avoid affecting books, contacts, and about pages) */
+
+/* Contact Section */
+.contact-section {
+    /* Existing styles remain unchanged */
+}
+
+/* About Section */
+.about-section {
+    /* Existing styles remain unchanged */
 }
