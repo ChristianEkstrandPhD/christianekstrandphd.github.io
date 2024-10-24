@@ -392,18 +392,19 @@ footer {
 
 /* For small screens like mobile phones */
 @media (max-width: 768px) {
+        /* Profile photo is now above the hero */
     .profile-photo {
-        width: 120px; /* Make the photo smaller */
-        height: 120px; /* Ensure it's a circular size */
-        position: static; /* Let it flow within the document normally */
-        margin: 20px auto 0 auto; /* Center the image horizontally */
-        display: block; /* Ensure it's treated as a block-level element */
+        position: relative; /* Make sure it's positioned in normal flow */
+        margin-top: 20px; /* Add some space at the top */
+        margin-bottom: 20px; /* Add some space below the profile photo */
+        width: 120px; /* Make the photo smaller for mobile screens */
     }
 
     .hero {
-        text-align: center; /* Center the text and photo */
-        padding: 40px 20px; /* Reduce padding for smaller screens */
+        padding: 40px 20px; /* Reduce padding for mobile */
+        text-align: center; /* Center the text */
     }
+
 
     /* Reduce font size on smaller screens for better fit */
     .hero h1 {
