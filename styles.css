@@ -390,8 +390,31 @@ footer {
     color: #16a085;
 }
 
+/* Hide the small screen profile container by default */
+.profile-photo-container-small-screen {
+    display: none;
+}
+
+
+/* Profile photo specifically for small screens */
+.profile-photo-small-screen {
+    width: 120px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+}
+
+
 /* For small screens like mobile phones */
 @media (max-width: 768px) {
+    .profile-photo {
+        display: none;
+    }
+    .profile-photo-container-small-screen {
+        display: block;
+    }
+
         /* Profile photo is now above the hero */
     .profile-photo {
         position: static; /* Make sure it's positioned in normal flow */
