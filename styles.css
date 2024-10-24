@@ -186,10 +186,6 @@ footer {
     border-radius: 50%; /* Make the photo circular */
     display: block;
     object-fit: cover;
-    position: absolute; /* Make it float within the hero section */
-    top: 50%; /* Vertically center the image */
-    right: 20px; /* Align to the right */
-    transform: translateY(-50%); /* Ensure the image is vertically centered */
 }
 
 /* Media query for larger screens (iPad or desktop) */
@@ -201,6 +197,11 @@ footer {
 
     .profile-photo {
         width: 200px; /* Increase the size of the photo on larger screens */
+        position: absolute; /* Make it float within the hero section */
+    top: 50%; /* Vertically center the image */
+    right: 20px; /* Align to the right */
+    transform: translateY(-50%); /* Ensure the image is vertically centered */
+        margin: 0;
     }
 }
 
