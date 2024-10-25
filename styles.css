@@ -235,7 +235,7 @@ img {
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
-    width: 200px;
+    width: 150px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
@@ -444,7 +444,7 @@ img {
 .author-photo {
     width: 200px; /* Adjust the size of the author photo */
     height: 200px;
-    border-radius: 10%;
+    border-radius: 50%;
     object-fit: cover;
     display: block;
     margin: 0 auto 30px auto; /* Center the image */
