@@ -456,12 +456,14 @@ footer {
     }
 
     .book-item {
+        order: -1;
         width: 100%; /* Make the book items take full width */
         margin-bottom: 20px; /* Add spacing between book items */
     }
  /* Allow the books to stack vertically on smaller screens */
     .books-container {
         flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: center;
     }
        .article-item, .book-item {
         width: 100%; /* Make the items take full width on mobile */
