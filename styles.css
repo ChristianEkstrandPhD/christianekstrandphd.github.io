@@ -229,23 +229,25 @@ footer {
 
 /* Article Section */
 .article-item {
-    max-width: 1000px;
+    /* Removed display: flex; to stack headline above content */
+    max-width: 600px;
     margin: 0 auto; /* Center the article item */
 }
 
-/* Article content layout */
+/* Article section flexbox layout */
 .article-content {
-    margin-top: 10px;
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the image and description */
+    margin-top: 10px; /* Add spacing between the title and the content */
+    justify-content: flex-start; /* Align content to the left */
 }
 
 /* Article Image */
 .article-image {
-    float: left;
-    width: 200px; /* Make image four times as big */
-    height: auto;
+    width: 150px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
-    margin-right: 20px;
-    margin-bottom: 20px;
 }
 
 /* Article Title */
@@ -265,7 +267,7 @@ footer {
     font-size: 16px;
     color: #333;
     margin: 10px 0;
-    text-align: left;
+    max-width: 500px;
 }
 
 /* Ensure full text is displayed under each book */
@@ -479,16 +481,9 @@ footer {
     }
 
     .article-image {
-        float: none;
-        margin: 0 auto 20px;
-        display: block;
-        width: 100%;
+        width: 120px; /* Reduce size of the image on smaller screens */
+        height: 120px;
     }
-
-    .article-item {
-        max-width: 100%;
-        margin: 0 20px;
-    }
-
     /* Ensure proper alignment on smaller screens */
 }
+
