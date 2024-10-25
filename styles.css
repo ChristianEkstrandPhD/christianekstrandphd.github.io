@@ -190,7 +190,7 @@ img {
     margin: 40px auto;
 }
 
-.home-book-section .book-item {
+.home-book-section .home-book-item {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -198,7 +198,7 @@ img {
     margin: 0 auto;
 }
 
-.home-book-section .book-cover {
+.home-book-section .home-book-item .home-book-cover {
     width: 300px;
     height: 450px;
     object-fit: cover;
@@ -207,7 +207,7 @@ img {
     border-radius: 8px;
 }
 
-.home-book-section p {
+.home-book-section .home-book-item p {
     font-size: 16px;
     line-height: 1.6;
     word-wrap: break-word;
@@ -344,4 +344,3 @@ footer {
         margin-bottom: 40px;
     }
 }
-
