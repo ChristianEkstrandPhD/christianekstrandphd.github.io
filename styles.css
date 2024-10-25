@@ -1,10 +1,10 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -116,48 +116,7 @@ img {
     height: auto;
 }
 
-/* Main Content */
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.button {
-    display: inline-block;
-    background-color: #1abc9c;
-    color: #fff;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.button:hover {
-    background-color: #16a085;
-}
-
-/* Footer */
-footer {
-    background-color: #f5f5f5;
-    color: #777;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* Base styles for the hero section */
+/* Hero Section */
 .hero {
     background-color: #1abc9c;
     padding: 80px 20px;
@@ -166,7 +125,6 @@ footer {
     color: white;
 }
 
-/* Style the heading and paragraph */
 .hero h1 {
     color: white;
     font-size: 48px;
@@ -179,7 +137,6 @@ footer {
     margin-bottom: 40px;
 }
 
-/* Base styles for the profile photo */
 .profile-photo {
     width: 150px;
     height: auto;
@@ -205,12 +162,35 @@ footer {
     }
 }
 
-.book-section {
+/* Main Content */
+.main-content {
+    display: block; /* Default for small screens */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .main-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 50px;
+    }
+    .home-book-section, .article-section {
+        width: 45%;
+        box-sizing: border-box;
+    }
+}
+
+/* Home Page Book Section Styles */
+.home-book-section {
     text-align: center;
     margin: 40px auto;
 }
 
-.book-item {
+.home-book-section .book-item {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -218,17 +198,7 @@ footer {
     margin: 0 auto;
 }
 
-.book-item p {
-    font-size: 16px;
-    line-height: 1.6;
-    word-wrap: break-word;
-    white-space: normal;
-    overflow: visible;
-    text-align: left;
-    margin: 0 10px 20px;
-}
-
-.book-cover {
+.home-book-section .book-cover {
     width: 300px;
     height: 450px;
     object-fit: cover;
@@ -237,8 +207,14 @@ footer {
     border-radius: 8px;
 }
 
-.book-item h3 {
-    margin-bottom: 15px;
+.home-book-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+    text-align: left;
+    margin: 0 10px 20px;
 }
 
 /* Article Section Styles */
@@ -277,31 +253,12 @@ footer {
     text-align: justify;
 }
 
-/* Main Content */
-.main-content {
-    display: block;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* For larger screens */
-@media (min-width: 768px) {
-    .main-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 50px;
-    }
-    .book-section, .article-section {
-        width: 45%;
-        box-sizing: border-box;
-    }
-}
-
 /* Responsive Adjustments */
 @media (max-width: 767px) {
-    .book-section, .article-section {
+    .main-content {
+        display: block;
+    }
+    .home-book-section, .article-section {
         width: 100%;
     }
     .article-image {
@@ -312,150 +269,6 @@ footer {
     .article-description {
         text-align: left;
     }
-}
-
-/* Contact Section */
-.contact-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-.contact-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.contact-form label {
-    font-size: 16px;
-    margin-bottom: 5px;
-    text-align: left;
-    width: 100%;
-    max-width: 400px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-.contact-form button {
-    background-color: #1abc9c;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.contact-form button:hover {
-    background-color: #16a085;
-}
-
-/* Contact Info Section */
-.contact-info h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.contact-info p, .contact-info ul {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.contact-info ul {
-    list-style: none;
-    padding: 0;
-}
-
-.contact-info ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-.contact-info ul li a {
-    text-decoration: none;
-    color: #1abc9c;
-}
-
-.contact-info ul li a:hover {
-    color: #16a085;
-}
-
-/* About Section */
-.about-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: left;
-}
-
-.about-section h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.author-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 30px auto;
-}
-
-.author-bio h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.author-bio p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.author-bio ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.author-bio ul li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.author-bio ul li a {
-    text-decoration: none;
-    color: #1abc9c;
-}
-
-.author-bio ul li a:hover {
-    color: #16a085;
-}
-
-/* For small screens like mobile phones */
-@media (max-width: 768px) {
     .profile-photo {
         width: 120px;
         height: 120px;
@@ -476,20 +289,59 @@ footer {
     .hero p {
         font-size: 16px;
     }
-
-    .book-section {
-        padding: 20px;
-    }
-
-    .book-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* Allow the books to stack vertically on smaller screens */
-    .books-container {
-        flex-wrap: wrap;
-    }
 }
 
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Books Page Styles */
+.book-section {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.books-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: nowrap;
+}
+
+.book-item {
+    width: 45%;
+    box-sizing: border-box;
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Responsive Adjustments for Books Page */
+@media (max-width: 767px) {
+    .books-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .book-item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
 
