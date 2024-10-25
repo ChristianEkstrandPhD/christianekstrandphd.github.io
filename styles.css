@@ -283,7 +283,7 @@ footer {
 
 .book-cover {
     width: 350px; /* Increase the width */
-    height: auto; /* Maintain the aspect ratio */
+    height: 450px; /* Maintain the aspect ratio */
     object-fit: cover;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
