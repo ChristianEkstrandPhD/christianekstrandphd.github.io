@@ -238,13 +238,14 @@ footer {
     display: flex;
     align-items: flex-start; /* Align items at the top */
     gap: 20px; /* Add space between the image and description */
-    margin-top: 10px; /* Space between the title and the content */
+    margin-top: 10px; /* Add spacing between the title and the content */
+    justify-content: flex-start; /* Align content to the left */
 }
 
 /* Article Image */
 .article-image {
-    width: 150px;
-    height: auto;
+    width: 150px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
     object-fit: cover;
 }
 
