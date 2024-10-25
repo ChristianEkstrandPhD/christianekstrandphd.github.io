@@ -199,7 +199,7 @@ img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    margin-top: 120px;  /* Add space above the image */
+    margin-top: 40px;  /* Add space above the image */
     margin-bottom: 20px;
     border-radius: 8px;
 }
@@ -304,9 +304,9 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: nowrap; /* Prevent wrapping on larger screens */
-max-width: 1200px;  /* Limit the total width */
+max-width: 1500px;  /* Limit the total width */
     margin: 0 auto;    /* Center the container */    
 }
 
@@ -448,7 +448,7 @@ max-width: 1200px;  /* Limit the total width */
 .author-photo {
     width: 200px; /* Adjust the size of the author photo */
     height: 200px;
-    border-radius: 10%;
+    border-radius: 50%;
     object-fit: cover;
     display: block;
     margin: 0 auto 30px auto; /* Center the image */
