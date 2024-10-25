@@ -291,6 +291,14 @@ img {
     .hero p {
         font-size: 16px;
     }
+    .books-container {
+        flex-direction: column;  /* Stack books vertically */
+        align-items: center;     /* Center the books */
+    }
+
+    .book-item {
+        margin-bottom: 20px;     /* Add some space between stacked books */
+    } 
 }
 
 /* Original Book Styles (for books.html) */
