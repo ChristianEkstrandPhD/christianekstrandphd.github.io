@@ -117,26 +117,6 @@ img {
     height: auto;
 }
 
-/* Main Content */
-.main-content {
-    display: flex;
-    flex-direction: column;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-@media (min-width: 768px) {
-    .main-content {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .book-section, .article-section {
-        flex: 1;
-        margin: 0 20px;
-    }
-}
-
 /* Hero Section */
 .hero {
     background-color: #1abc9c;
@@ -166,10 +146,8 @@ img {
     object-fit: cover;
 }
 
-/* Media query for larger screens (iPad or desktop) */
 @media (min-width: 768px) {
     .hero {
-        text-align: center;
         padding: 80px 40px;
     }
 
@@ -183,58 +161,65 @@ img {
     }
 }
 
-/* Book Section */
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .book-section,
+    .article-section {
+        width: 48%;
+    }
+}
+
 .book-section {
     text-align: center;
-    margin: 40px auto;
+    margin-bottom: 40px;
 }
 
 .book-item {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin: 0 auto;
+    /* Existing styles */
 }
 
 .book-cover {
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    height: auto;
     object-fit: cover;
     margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
 }
 
-.book-item h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-/* Article Section */
 .article-section {
-    text-align: left;
-    margin: 40px auto;
+    margin-bottom: 40px;
 }
 
 .article-item {
-    max-width: 800px;
-    margin: 0 auto;
+    /* Existing styles */
 }
 
 .article-title {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 20px;
     color: #1abc9c;
 }
 
 .article-title a {
+    color: inherit;
     text-decoration: none;
-    color: #1abc9c;
 }
 
 .article-title a:hover {
-    color: #16a085;
+    text-decoration: underline;
 }
 
 .article-content {
@@ -252,30 +237,19 @@ img {
 }
 
 .article-description {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
     text-align: justify;
 }
 
-.article-content::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Footer */
-footer {
-    background-color: #f5f5f5;
-    color: #777;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-/* For small screens */
 @media (max-width: 767px) {
     .main-content {
         flex-direction: column;
+    }
+
+    .book-section,
+    .article-section {
+        width: 100%;
     }
 
     .article-image {
@@ -296,11 +270,6 @@ footer {
         display: block;
     }
 
-    .hero {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
     .hero h1 {
         font-size: 28px;
     }
@@ -308,13 +277,13 @@ footer {
     .hero p {
         font-size: 16px;
     }
+}
 
-    .book-section {
-        padding: 20px;
-    }
-
-    .book-item {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+/* Footer */
+footer {
+    background-color: #f5f5f5;
+    color: #777;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
