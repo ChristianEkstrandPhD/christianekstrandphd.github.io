@@ -265,7 +265,7 @@ footer {
 
 .article-image {
     float: left;
-    width: 300px; /* Increase the image size */
+    width: 100px; /* Increase the image size */
     height: auto;
     margin-right: 20px;
     margin-bottom: 20px;
