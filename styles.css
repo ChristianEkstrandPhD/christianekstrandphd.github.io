@@ -204,8 +204,9 @@ img {
 }
 
 /* Article Section */
-.article-section {
-    margin-bottom: 40px;
+    .article-section {
+    max-width: 600px;  /* Adjust this value as needed */
+    margin: 0 auto;    /* Center the article section */
 }
 
 .article-item {
