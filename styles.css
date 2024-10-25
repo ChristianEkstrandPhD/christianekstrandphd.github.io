@@ -198,9 +198,9 @@ footer {
     .profile-photo {
         width: 200px; /* Increase the size of the photo on larger screens */
         position: absolute; /* Make it float within the hero section */
-    top: 50%; /* Vertically center the image */
-    right: 20px; /* Align to the right */
-    transform: translateY(-50%); /* Ensure the image is vertically centered */
+        top: 50%; /* Vertically center the image */
+        right: 20px; /* Align to the right */
+        transform: translateY(-50%); /* Ensure the image is vertically centered */
         margin: 0;
     }
 }
@@ -229,10 +229,11 @@ footer {
 
 /* Article Section */
 .article-item {
-    display: flex;
-    align-items: flex-start; /* Align content to the top */
+    /* Removed display: flex; to stack headline above content */
     max-width: 600px;
+    margin: 0 auto; /* Center the article item */
 }
+
 /* Article section flexbox layout */
 .article-content {
     display: flex;
@@ -467,12 +468,14 @@ footer {
         width: 100%; /* Make the book items take full width */
         margin-bottom: 20px; /* Add spacing between book items */
     }
- /* Allow the books to stack vertically on smaller screens */
+
+    /* Allow the books to stack vertically on smaller screens */
     .books-container {
         flex-wrap: wrap; /* Allow wrapping for smaller screens */
         justify-content: center;
     }
-       .article-item, .book-item {
+
+    .article-item, .book-item {
         width: 100%; /* Make the items take full width on mobile */
         margin-bottom: 20px; /* Add space between items */
     }
