@@ -205,7 +205,7 @@ img {
 
 /* Article Section */
     .article-section {
-    max-width: 600px;  /* Adjust this value as needed */
+    max-width: 200px;  /* Adjust this value as needed */
     margin: 0 auto;    /* Center the article section */
 }
 
