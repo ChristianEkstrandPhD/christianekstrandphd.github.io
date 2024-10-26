@@ -256,6 +256,13 @@ img {
     clear: both;
 }
 
+.new-article-heading {
+    font-size: 32px;          /* Match the size of the "New Book!" heading */
+    color: black;             /* Set the color to black */
+    margin-bottom: 20px;      /* Add space below the heading */
+    text-align: center;       /* Center align, if needed */
+}
+
 /* For small screens */
 @media (max-width: 767px) {
     .main-content {
