@@ -187,6 +187,10 @@ img {
     margin-bottom: 40px;
 }
 
+.index-book-item h2 {
+    font-size: 36px; /* Increase this value as desired */
+}
+
 .index-book-item {
     text-align: center;
     display: flex;
