@@ -223,6 +223,7 @@ img {
 .article-title a {
     color: inherit;
     text-decoration: none;
+    text-decoration: underline; /* Adds an underline to show it’s a hyperlink */
 }
 
 .article-title a:hover {
