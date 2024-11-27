@@ -1,4 +1,16 @@
-* {
+<style>
+    .review {
+        text-align: center; /* Center the text */
+        margin-bottom: 5px; /* Reduce space below the review text */
+    }
+    .stars {
+        display: inline-block;
+        color: gold;
+        font-size: 24px; /* Adjust size as needed */
+        font-family: Arial, sans-serif;
+        margin-top: 0; /* Remove additional space above the stars */
+    }
+</style>* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
