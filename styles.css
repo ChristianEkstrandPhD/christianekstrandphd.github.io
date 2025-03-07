@@ -254,6 +254,12 @@ img {
     text-align: justify;
 }
 
+.book-nr1 {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
 .article-content::after {
     content: "";
     display: table;
